@@ -7,5 +7,25 @@
   </head>
   <body>
     <h1>Hello from auto-analytix</h1>
+    <h1>Welcome to the Basic Analytics Website</h1>
+
+    <!-- JavaScript code for tracking visits -->
+    <script>
+      // Check if the 'visits' key exists in local storage
+      if (localStorage.getItem("visits")) {
+        // If it exists, increment the value by 1
+        var visits = parseInt(localStorage.getItem("visits")) + 1;
+        localStorage.setItem("visits", visits);
+      } else {
+        // If it doesn't exist, set it to 1
+        localStorage.setItem("visits", 1);
+      }
+
+      // Display the number of visits
+      var visits = localStorage.getItem("visits");
+      document.write(
+        "<p>This website has been visited " + visits + " times.</p>"
+      );
+    </script>
   </body>
 </html>
