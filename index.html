@@ -3,57 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Analytics Website</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f5f5f5;
-        margin: 0;
-        padding: 0;
-      }
-
-      h1 {
-        color: #333;
-      }
-
-      p {
-        font-size: 18px;
-        color: #555;
-      }
-
-      .container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-    </style>
+    <title>Analytics Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Welcome to the Basic Analytics Website</h1>
+    <header>
+      <div class="logo">
+        <img src="./public/full-logo-removed-bg.png" alt="Company Logo" />
+      </div>
+    </header>
 
-      <!-- JavaScript code for tracking visits -->
-      <script>
-        // Check if the 'visits' key exists in local storage
-        if (localStorage.getItem("visits")) {
-          // If it exists, increment the value by 1
-          var visits = parseInt(localStorage.getItem("visits")) + 1;
-          localStorage.setItem("visits", visits);
-        } else {
-          // If it doesn't exist, set it to 1
-          localStorage.setItem("visits", 1);
-        }
+    <main>
+      <div class="carousel">
+        <div class="carousel-text">
+          <p>Analytics Dashboard</p>
+          <p>Track Your Data in Real Time</p>
+          <p>Gain Valuable Insights</p>
+        </div>
+      </div>
+    </main>
 
-        // Display the number of visits
-        var visits = localStorage.getItem("visits");
-        document.write(
-          "<p>This website has been visited " + visits + " times.</p>"
-        );
-      </script>
-    </div>
+    <footer>
+      <p>
+        &copy; <span id="currentYear"></span> Your Company. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
